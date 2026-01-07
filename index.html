@@ -12,9 +12,7 @@
     <title>diet food</title>
     <meta charset="utf-8">
     <style>
-        a {
-            color:blue;
-        }
+        
         h1{
             border-bottom: 2px solid gray;
             font-size: 55px;
@@ -42,7 +40,7 @@
             margin: 0;
             border-right: 2px solid gray;
             width: 110px;
-            background-color: black;
+            background-color: gray;
         }
         #grid {
             display: grid;
@@ -78,9 +76,21 @@
             }
         }
     </style>
+    <script src="coloring.js"></script>
 </head>
 <body>
+    
+    <div id="topgrid">
+    <input id="daynightbutton" type="button" value="night" onclick="
+        if(document.querySelector('#daynightbutton').value==='night'){
+            setcolors('black','white','red','day');
+            document.querySelector('#grid p').style.color='white';
+        } else {
+            setcolors('white','black','blueviolet','night');
+            document.querySelector('#grid p').style.color='black';
+        }">
     <h1><a href="index.html">WEB</a></h1>
+    </div>
     <h2>Healthy Diet(다이어트 식단)</h2>
     <p id="video">
         <iframe width="560" height="315" src="https://www.youtube.com/embed/AYXfaVD5o40?si=gJGTd4blNlqkNmqo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -93,7 +103,7 @@
             <li><a href="4.html" id="chicken">chicken breast</a></li>
             <li><a href="5.html" id="egg">egg</a></li>
         </ol>
-        <!-- <a href="https://www.healthline.com/nutrition/most-weight-loss-friendly-foods" target="_blank" title="16 healthy foods to support">healthy foods</a> -->
+        
         <div>
         <h5><u>Text</u></h5>
         <p>When we try to lose weight we have to take care of your <u>diet and exercise</u>.

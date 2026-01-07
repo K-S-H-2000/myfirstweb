@@ -12,9 +12,18 @@
     <title>diet food</title>
     <meta charset="utf-8">
     <link rel="stylesheet" href="style.css">
+    <script src="coloring.js"></script>
 </head>
 <body>
+    <div id="topgrid">
+    <input id="daynightbutton" type="button" value="night" onclick="
+        if(document.querySelector('#daynightbutton').value==='night'){
+            setcolors('black','white','red','day');
+        } else {
+            setcolors('white','black','blueviolet','night');
+        }">
     <h1><a href="index.html">WEB</a></h1>
+    </div>
     <h2>Healthy Diet(다이어트 식단)</h2>
     <div id="grid">
     <ol>
